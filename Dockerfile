@@ -1,4 +1,4 @@
-FROM tomcat:8-jdk8
+FROM tomcat
 
 LABEL maintainer="praveengayathri1009@gmail.com"
 
