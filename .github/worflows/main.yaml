@@ -39,6 +39,8 @@ jobs:
 
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
 
+          docker tag my-ecr-repo:latest 841354735415.dkr.ecr.ap-south-1.amazonaws.com/my-ecr-repo:latest
+
           echo "Pushing image to ECR..."
 
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
