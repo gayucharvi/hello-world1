@@ -34,7 +34,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: my-ecr-repo
-        IMAGE_TAG: tomcat
+        IMAGE_TAG: latest
       run: |
         docker build -t my-ecr-repo .
         docker push 841354735415.dkr.ecr.ap-south-1.amazonaws.com/my-ecr-repo:latest
