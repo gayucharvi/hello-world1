@@ -30,7 +30,7 @@ jobs:
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
       - name: Download task definition
         run: |
-          aws ecs describe-task-definition --task-definition aws-ecs-demo-task:3 \
+          aws ecs describe-task-definition --task-definition aws-ecs-demo-task:1 \
           --query taskDefinition > task-definition.json
 
           
@@ -39,7 +39,7 @@ jobs:
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
           task-definition: task-definition.json
-          container-name: newimge
+          container-name: mycontainer
           image: ${{ steps.build-image.outputs.image }}
           
       - name: Deploy Amazon ECS task definition
