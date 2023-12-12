@@ -38,8 +38,8 @@ jobs:
         id: task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
-          task-definition: ${{ env.ECS_TASK_DEFINITION }}
-          container-name: ${{ env.CONTAINER_NAME }}
+          task-definition: aws-ecs-demo-task:3
+          container-name: newimage
           image: ${{ steps.build-image.outputs.image }}
           
       - name: Deploy Amazon ECS task definition
