@@ -36,5 +36,5 @@ jobs:
         ECR_REPOSITORY: my-ecr-repo
         IMAGE_TAG: tomcat
       run: |
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        docker build -t my-ecr-repo .
+        docker push 841354735415.dkr.ecr.ap-south-1.amazonaws.com/my-ecr-repo:latest
