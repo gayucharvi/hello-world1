@@ -15,8 +15,8 @@ spec:
         app: javaapp
     spec:
       containers:
-      - name: my-ecr-repo
-        image: latest
+      - name: newcontainer
+        image: 889796695136.dkr.ecr.ap-south-1.amazonaws.com/my-ecr-repo:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
